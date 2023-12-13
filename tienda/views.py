@@ -12,8 +12,10 @@ from .models import *
 # Create your views here.
 
 def index(request):
+    http_host = request.META.get('HTTP_HOST')
     return render(request, "index.html")
 
 
 def collage(request):
+    http_host = request.META.get('HTTP_HOST')
     return render(request, "collage.html")
